@@ -1,0 +1,29 @@
+{
+  "name": "sslcommerz-expressjs-example",
+  "version": "1.0.0",
+  "description": "Example source code for integrating sslcommerz payment gateway with expressjs project",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sslcommerz": "^1.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rkbi/sslcommerz-expressjs-example.git"
+  },
+  "keywords": [
+    "sslcommerz",
+    "expressjs",
+    "example"
+  ],
+  "author": "Md. Rakibul Islam <rakibul.islam@sslwireless.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rkbi/sslcommerz-expressjs-example/issues"
+  },
+  "homepage": "https://github.com/rkbi/sslcommerz-expressjs-example#readme"
+}
