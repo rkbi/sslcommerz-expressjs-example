@@ -19,6 +19,7 @@ app.get('/', (req, res) => {
 		success_url: 'http://localhost:3000/dump',
 		fail_url: 'http://localhost:3000/dump',
 		cancel_url: 'http://localhost:3000/dump',
+		ipn_url: 'http://your_public_server_address/ipn', // IPN does not work in local PC
 		shipping_method: 'Courier',
 		product_name: 'Computer.',
 		product_category: 'Electronic',
