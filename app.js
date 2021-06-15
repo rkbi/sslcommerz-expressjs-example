@@ -6,16 +6,12 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-const port = 3000
-
 app.get('/', (req, res) => {
 
 	let data = {
-		store_id: 'testbox',
-		store_passwd: 'qwerty',
 		total_amount: 100,
 		currency: 'BDT',
-		tran_id: 'tran_no_111',
+		tran_id: 'tran_id_111',
 		success_url: 'http://localhost:3000/dump',
 		fail_url: 'http://localhost:3000/dump',
 		cancel_url: 'http://localhost:3000/dump',
@@ -43,7 +39,8 @@ app.get('/', (req, res) => {
 		ship_country: 'Bangladesh',
 	}
 
-	new SSLCommerzPayment(data, false).then(function (apiResponse) {
+	let sslcz = new SSLCommerzPayment('testbox', 'qwerty', false)
+	sslcz.init(data).then(function (apiResponse) {
 		let GatewayPageURL = apiResponse.GatewayPageURL
 		res.redirect(GatewayPageURL)
 		console.log('Redirecting to: ', GatewayPageURL)
@@ -57,6 +54,7 @@ app.post('/dump', (req, res) => {
 	res.send(req.body)
 })
 
+let port = 3000
 app.listen(port, () => {
 	console.log(`Example app listening at http://localhost:${port}`)
 })
