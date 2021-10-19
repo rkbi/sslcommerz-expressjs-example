@@ -8,7 +8,8 @@ git clone https://github.com/rkbi/sslcommerz-expressjs-example.git
 ## Install
 
 ```bash
-npm install
+cd sslcommerz-expressjs-example
+npm i
 ```
 
 ## Run

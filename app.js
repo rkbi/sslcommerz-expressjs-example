@@ -1,6 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-var SSLCommerzPayment = require('sslcommerz')
+var SSLCommerzPayment = require('sslcommerz-lts')
 
 const app = express()
 app.use(bodyParser.urlencoded({ extended: true }))
